@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing page profesional con formulario y DB">
+  <meta name="keywords" content="landing page, formulario, mongodb">
+  <title>Tu Servicio Profesional - Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script> <!-- CSS moderno y fácil -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Animaciones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Iconos -->
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white font-sans">
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center text-center px-4" data-aos="fade-up">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">Transforma tu Negocio con Nuestros Servicios</h1>
+      <p class="text-xl text-gray-600 mb-8">Soluciones innovadoras para freelancers y emprendedores. ¡Haz que tu marca brille!</p>
+      <a href="#contact" class="bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition duration-300">¡Contáctanos Ahora!</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="py-20 px-4" data-aos="fade-right" data-aos-delay="200">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Nuestros Servicios</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="text-center p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
+        <i class="fas fa-code text-4xl text-blue-500 mb-4"></i>
+        <h3 class="text-xl font-semibold text-gray-800">Desarrollo Web</h3>
+        <p class="text-gray-600">Sitios modernos, rápidos y funcionales para tu negocio.</p>
+      </div>
+      <div class="text-center p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
+        <i class="fas fa-chart-line text-4xl text-green-500 mb-4"></i>
+        <h3 class="text-xl font-semibold text-gray-800">Marketing Digital</h3>
+        <p class="text-gray-600">Estrategias que convierten visitantes en clientes leales.</p>
+      </div>
+      <div class="text-center p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
+        <i class="fas fa-users text-4xl text-purple-500 mb-4"></i>
+        <h3 class="text-xl font-semibold text-gray-800">Consultoría</h3>
+        <p class="text-gray-600">Asesoría experta para escalar tu emprendimiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="py-20 bg-gray-100 px-4" data-aos="fade-left" data-aos-delay="400">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Lo que Dicen Nuestros Clientes</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-600 italic">"¡Increíble! Mi página web se ve profesional y atrae más clientes."</p>
+        <cite class="text-gray-800 font-semibold">- Ana López, Freelancer</cite>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-600 italic">"Las animaciones hacen que todo cobre vida. ¡Recomendado!"</p>
+        <cite class="text-gray-800 font-semibold">- Carlos Méndez, Emprendedor</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section id="contact" class="py-20 px-4" data-aos="fade-up" data-aos-delay="600">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">¡Hablemos de tu Proyecto!</h2>
+    <form id="contactForm" class="max-w-md mx-auto space-y-4 bg-white p-8 rounded-lg shadow-lg">
+      <input type="text" id="name" placeholder="Tu Nombre" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+      <input type="email" id="email" placeholder="Tu Email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+      <textarea id="message" placeholder="Cuéntanos tu idea" rows="4" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+      <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 transition">Enviar Mensaje</button>
+    </form>
+    <div id="response" class="mt-4 text-center transition-opacity duration-500"></div>
+  </section>
+
+  <!-- Footer Simple -->
+  <footer class="py-10 bg-gray-800 text-white text-center">
+    <p>&copy; 2024 Tu Servicio Profesional. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script> <!-- Tu JS personalizado -->
+</body>
+</html>
