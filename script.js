@@ -16,7 +16,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
 
   // Enviar a backend
   try {
-    const response = await fetch('/submit', {
+    const response = await fetch('https://landing-page-v10.netlify.app/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, message })
