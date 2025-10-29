@@ -67,7 +67,51 @@ app.post('/submit', async (req, res) => {
   }
 });
 
-// ... [Rutas /admin y /admin/login sin cambios] ...
+// Panel de admin con login simple
+app.get('/admin', (req, res) => {
+  res.send(`
+    <html>
+      <head><title>Panel de Admin - Landing Page</title></head>
+      <body style="font-family: Arial, sans-serif; padding: 20px;text-align: center">
+        <h1>Login al Panel de Registros</h1>
+        <form action="/admin/login" method="post">
+          Usuario: <input name="user" required><br><br>
+          Password: <input name="pass" type="password" required><br><br>
+          <button type="submit">Entrar</button>
+        </form>
+      </body>
+    </html>
+  `);
+});
+
+app.post('/admin/login', async (req, res) => {
+  const { user, pass } = req.body;
+  if (user === 'admin2023' && pass === 'secure123') { // Cambia para producción (ej. 'tuusuario' / 'tupasssegura')
+    try {
+      const leads = await Lead.find();
+      res.send(`
+        <html>
+          <head><title>Registros de Leads</title></head>
+          <body style="font-family: Arial, sans-serif; padding: 20px;">
+            <h1 style="color: blue;text-align: center">Leads Guardados</h1>
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+              <tr style="background-color: #f2f2f2;">
+                <th>Nombre</th><th>Email</th><th>Mensaje</th><th>Fecha</th>
+              </tr>
+              ${leads.map(lead => `<tr><td>${lead.name}</td><td>${lead.email}</td><td>${lead.message}</td><td>${lead.date}</td></tr>`).join('')}
+            </table>
+            <br><a href="/admin">Volver al Login</a>
+          </body>
+        </html>
+      `);
+    } catch (error) {
+      res.send('Error cargando leads');
+    }
+  } else {
+    res.send('Usuario o password incorrecto. <a href="/admin">Intentar de nuevo</a>');
+  }
+});
+
 
 // Iniciar servidor usando el PORT dinámico
 app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));
