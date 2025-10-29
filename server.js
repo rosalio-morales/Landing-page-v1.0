@@ -8,9 +8,14 @@ require('dotenv').config();
 
 // Define el puerto dinámico de Heroku o usa 3000
 const PORT = process.env.PORT || 3000; 
+const allowedOrigin = 'https://landing-page-v10.netlify.app';
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: allowedOrigin,
+    methods: ['GET', 'POST', 'OPTIONS'], // Asegúrate de incluir OPTIONS
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('.'));
