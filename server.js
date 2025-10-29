@@ -14,7 +14,8 @@ const app = express();
 app.use(cors({
     origin: allowedOrigin,
     methods: ['GET', 'POST', 'OPTIONS'], // Asegúrate de incluir OPTIONS
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type'], // Solo necesitas Content-Type
+    credentials: true // Si usas cookies o sesiones, si no, es opcional
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
