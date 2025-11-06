@@ -35,7 +35,7 @@ Una landing page moderna y responsiva con formulario de contacto, almacenamiento
 ## Uso
 - **Página Principal**: Landing page con hero, servicios, testimonios y formulario.
 - **Enviar Formulario**: Datos se validan, guardan en DB y envían email (si ha sido configurado).
-- **Panel de Admin**: Ve a http://localhost:3000/admin, login con usuario "cliente" y password "passseguro2023" (cambia para seguridad). Verás tabla con leads.
+- **Panel de Admin**: Ve a http://localhost:3000/admin, login con usuario "admin2023" y password "secure123" (cambia para seguridad). Verás tabla con leads.
 
 ## Personalización
 - **Colores/Texto**: Edita `index.html` y `styles.css`.
@@ -47,10 +47,10 @@ Una landing page moderna y responsiva con formulario de contacto, almacenamiento
 - **Backend (Heroku)**: Sube todo a heroku.com, configura vars de entorno (EMAIL_USER, etc.).
 - **Demo Vivo**: Necesario para vender – incluye URL en anuncio.
 
-## Precios de Venta (Fiverr/Workana)
-- **Básico ($20)**: Landing page estática sin funcionalidad.
-- **Estándar ($40)**: + Formulario con validación y email.
-- **Premium ($70)**: + Almacenamiento en DB y panel de admin.
+## Precios de Venta (Código Fuente en Gumroad)
+- **Básico ($20)**: Código fuente completo (landing page responsiva, formulario con validación, almacenamiento en MongoDB, envío de emails y panel de admin).
+- **Premium ($30)**: Código fuente completo + 1 mes de soporte por email (ayuda con instalación, personalización o errores).
+Compra aquí: https://chaliomorales.gumroad.com/l/ifxwz
 
 
 ## Screenshots
