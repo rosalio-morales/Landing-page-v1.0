@@ -17,6 +17,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type'], // Solo necesitas Content-Type
     credentials: true // Si usas cookies o sesiones, si no, es opcional
 }));
+app.set('trust proxy', 1);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('.'));
