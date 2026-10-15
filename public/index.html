@@ -61,17 +61,19 @@
   <section id="contact" class="py-20 px-4" data-aos="fade-up" data-aos-delay="600">
     <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">¡Hablemos de tu Proyecto!</h2>
     <form id="contactForm" class="max-w-md mx-auto space-y-4 bg-white p-8 rounded-lg shadow-lg">
-      <input type="text" id="name" placeholder="Tu Nombre" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
-      <input type="email" id="email" placeholder="Tu Email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
-      <textarea id="message" placeholder="Cuéntanos tu idea" rows="4" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+      <input type="text" id="name" maxlength="100" autocomplete="name" placeholder="Tu Nombre" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+      <input type="email" id="email" maxlength="254" autocomplete="email" placeholder="Tu Email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required>
+      <textarea id="message" maxlength="2000" placeholder="Cuéntanos tu idea" rows="4" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500" required></textarea>
+      <!-- Campo trampa para bots: oculto para las personas -->
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 transition">Enviar Mensaje</button>
     </form>
-    <div id="response" class="mt-4 text-center transition-opacity duration-500"></div>
+    <div id="response" role="status" aria-live="polite" class="mt-4 text-center transition-opacity duration-500"></div>
   </section>
 
   <!-- Footer Simple -->
   <footer class="py-10 bg-gray-800 text-white text-center">
-    <p>&copy; 2024 Tu Servicio Profesional. Todos los derechos reservados.</p>
+    <p>&copy; 2026 Tu Servicio Profesional. Todos los derechos reservados.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

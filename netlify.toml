@@ -1,0 +1,3 @@
+# Solo se publica el frontend; el backend vive en Render.
+[build]
+  publish = "public"
